@@ -1,8 +1,10 @@
 from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
 from langchain_ollama import ChatOllama
+import os
 
 load_dotenv()
+endpoint = os.getenv("LANGSMITH_ENDPOINT")
 
 def main():
     print("hello to linkchain")
