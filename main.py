@@ -10,16 +10,12 @@ from langchain.tools import tool
 from langchain_core.messages import HumanMessage
 from langchain_openai import ChatOpenAI
 from langchain_ollama import ChatOllama
-<<<<<<< HEAD
-
-=======
 from tavily import TavilyClient
 
 
 tavily = TavilyClient()
 
 @tool
->>>>>>> 9aa2d77 (working with ollama  commit)
 def search(query: str) -> str:
     """
     Tool that searches over internet 
@@ -29,12 +25,10 @@ def search(query: str) -> str:
             The search result
     """
     print(f"search for {query}")
-<<<<<<< HEAD
-    return "Tokyo is sunny"
-=======
+
     response = tavily.search(query=query)
     return str(response) 
->>>>>>> 9aa2d77 (working with ollama  commit)
+
 
 llm = ChatOllama(temperature=0, model="gemma4:e2b")
 #llm = ChatOpenAI(    model="gpt-5.6-terra",temperature=0)
