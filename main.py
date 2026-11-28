@@ -2,6 +2,8 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
+#from typing import List
+#from pydantic import BaseModel, Field
 
 from langchain.agents import create_agent
 from langchain.tools import tool
